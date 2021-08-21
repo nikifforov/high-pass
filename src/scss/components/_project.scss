@@ -1,0 +1,325 @@
+.project {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .project__wrapper {
+    display: none;
+    opacity: 0;
+  }
+
+  &__title {
+    color: $color-black;
+    margin-bottom: 15px;
+  }
+
+  &__grid-first {
+    grid-template-columns: repeat(3, minmax(190px, 1fr)) repeat(2, minmax(300px, 1.5fr));
+    grid-template-rows: repeat(2, 300px);
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+    background-repeat: no-repeat;
+    background-position: top;
+    justify-content: flex-end;
+  }
+  
+  &__item:first-child {
+    background-image: url(../images/project/1.jpg);
+  }
+  &__item:nth-child(2) {
+    background-image: url(../images/project/2.jpg);
+  }
+  &__item:nth-child(3) {
+    background-image: url(../images/project/3.jpg);
+  }
+  &__item:nth-child(6) {
+    background-image: url(../images/project/6.jpg);
+  }
+  &__item:nth-child(7) {
+    background-image: url(../images/project/7.jpg);
+  }
+
+  &__item::after {
+    content: "";
+    position: absolute;
+    display: block;
+    padding: 6px 14px;
+    top: 7px;
+    right: 7px;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: $color-darkGray;
+  }
+
+  &__item:first-child::after {
+    content: "#пейзаж";
+  }
+  &__item:nth-child(2)::after {
+    content: "#портрет";
+  }
+  &__item:nth-child(3)::after {
+    content: "#предмет";
+  }
+  &__item:nth-child(4)::after {
+    content: "#fiji";
+  }
+  &__item:nth-child(5)::after {
+    content: "#проектзабвение";
+  }
+  &__item:nth-child(6)::after {
+    content: "#ретушь";
+  }
+  &__item:nth-child(7)::after {
+    content: "#портрет";
+  }
+
+  &__item:nth-child(4) {
+    display: block;
+    grid-column: 4 / 6;
+    background-image: url(../images/project/4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__item:nth-child(5) {
+    display: block;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    background-image: url(../images/project/5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__item:nth-child(6),
+  &__item:nth-child(7){
+    padding-bottom: 0;
+    
+    .project__item-text {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__item-img {
+    margin-bottom: 15px;
+  }
+
+  &__item-text {
+    margin-bottom: 13px;
+    line-height: 22px;
+    color: $color-black;
+  }
+
+  &__item-data {
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+    color: $color-Grey;
+  }
+
+  &__item-data svg {
+    margin-right: 4px;
+  }
+
+  .big-card {
+    position: relative;
+    padding: 26px 30px;
+
+    .project__item-data {
+      margin-bottom: 4px;
+    }
+
+    &__title {
+      max-width: 293px;
+      margin-bottom: 6px;
+      line-height: 24px;
+    }
+
+    &__text {
+      max-width: 293px;
+      line-height: 22px;
+    }
+
+    &__link {
+      position: absolute;
+      bottom: 30px;
+      background-color: transparent;
+    }
+
+    &__link:hover {
+      color: $color-white;
+      background-color: $color-btn-hover;
+    }
+
+    &__link:focus-visible {
+      color: $color-white;
+      background-color: $color-btn-focus;
+      border-color: $color-btn-hover;
+    }
+
+    &__link:active {
+      background-color: $color-active;
+      border-color: $color-active;
+    }
+  }
+
+  .project__tabs-btn {
+    max-width: 90px;
+    margin: 0 auto;
+  }
+
+  .tab-btn {
+    width: 30px;
+    height: 30px;
+    background: #C4C4C4;
+    border: none;
+    cursor: pointer;
+    transition: color .2s linear, background .2s linear;
+  }
+
+  .tab-btn:not(:last-child) {
+    margin-right: 26px;
+  }
+
+  .tab-btn:hover {
+    color: $color-btn-hover;
+    background-color: #E9E9E9;
+    
+  }
+
+  .tab-btn:focus-visible {
+    background-color: #FFD4C1;
+  }
+
+
+  .tab-btn:hover.active {
+    color: $color-white;
+    background-color: $color-btn-hover;
+  }
+
+  .tab-btn:focus-visible.active {
+    color: $color-white;
+    background-color: $color-btn-hover;
+  }
+
+  .active {
+    color: $color-white;
+    background-color: $color-btn-hover;
+  }
+
+  &__grid-second {
+    grid-template-columns: repeat(3, minmax(190px, 1fr)) repeat(2, minmax(300px, 1.5fr));
+    grid-template-rows: repeat(2, 300px);
+    gap: 30px;
+    margin-bottom: 50px;
+
+    &__item:nth-child(1) {
+      display: block;
+      grid-column: 1 / 4;
+      background-image: url(../images/project/21.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    &__item:nth-child(7) {
+      display: block;
+      grid-column: 4 / 6;
+      grid-row: 2 / 3;
+      background-image: url(../images/project/27.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 5px;
+      background-repeat: no-repeat;
+      background-position: top;
+      justify-content: flex-end;
+    }
+
+    &__item:nth-child(2) {
+      background-image: url(../images/project/22.jpg);
+    }
+    &__item:nth-child(3) {
+      background-image: url(../images/project/23.jpg);
+    }
+    &__item:nth-child(4) {
+      background-image: url(../images/project/24.jpg);
+    }
+    &__item:nth-child(5) {
+      background-image: url(../images/project/25.jpg);
+    }
+    &__item:nth-child(6) {
+      background-image: url(../images/project/26.jpg);
+    }
+  
+    &__item::after {
+      content: "";
+      position: absolute;
+      display: block;
+      padding: 6px 14px;
+      top: 7px;
+      right: 7px;
+      font-size: 14px;
+      line-height: 16px;
+      background-color: $color-darkGray;
+    }
+  
+    &__item:first-child::after {
+      content: "#портрет";
+    }
+    &__item:nth-child(2)::after {
+      content: "#ретушь";
+    }
+    &__item:nth-child(3)::after {
+      content: "#портрет";
+    }
+    &__item:nth-child(4)::after {
+      content: "#пейзаж";
+    }
+    &__item:nth-child(5)::after {
+      content: "#предмет";
+    }
+    &__item:nth-child(6)::after {
+      content: "#пейзаж";
+    }
+    &__item:nth-child(7)::after {
+      content: "#проектджаз";
+    }
+  }
+
+  .grid-active {
+    display: grid;
+    opacity: 1;
+    animation: gridActive .2s linear forwards;
+  }
+
+  @keyframes gridActive {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+  
+    50% {
+      display: grid;
+      opacity: 0;
+    }
+  
+    100% {
+      display: grid;
+      opacity: 1;
+    }
+  }
+}

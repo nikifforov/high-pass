@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  // max-width: 1920px;
+  margin: 0 auto;
+  font-family: $font-roboto;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  color: $color-white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+a:focus, a:focus-visible {
+  outline: none;
+}
+
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button, input, textarea {
+  padding: 0;
+  outline: none;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-family: $font-neue;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.btn-orange {
+  font-family: $font-roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-white;
+  padding: 13px 19px;
+  background-color: $color-btn-hover;
+  border: 3px solid $color-btn-hover;
+  transition: all .2s linear;
+}
+
+.btn-orange:hover {
+  background-color: $color-btn-focus;
+}
+
+.btn-orange:active {
+  background-color: $color-active;
+}
+
+.btn-orange:focus-visible {
+  border-color: $color-active;
+}
